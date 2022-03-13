@@ -3,28 +3,11 @@ import * as T from "Types/index";
 
 import Button from "Components/Button/index.Button";
 
-import {
-  faInstagram,
-  faGithub,
-  faBlogger,
-} from "@fortawesome/free-brands-svg-icons";
+interface ButtonContainerType {
+  icons: T.iconType[];
+}
 
-const icons: T.iconType[] = [
-  {
-    id: 1,
-    icon: faInstagram,
-  },
-  {
-    id: 2,
-    icon: faGithub,
-  },
-  {
-    id: 3,
-    icon: faBlogger,
-  },
-];
-
-const ButtonContainer = (): JSX.Element => {
+const ButtonContainer = ({ icons }: ButtonContainerType): JSX.Element => {
   return (
     <S.Container>
       {icons.map((icon) => (

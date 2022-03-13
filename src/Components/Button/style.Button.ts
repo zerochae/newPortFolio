@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { css } from "styled-components";
 
 /*
 color code
@@ -16,8 +16,8 @@ const LayerProps = [
 
 const LiProps = [
   { id: 1, background: "#e4405f" },
-  { id: 2, background: "#3b5999" },
-  { id: 3, background: "#25D366" },
+  { id: 2, background: "#555" },
+  { id: 3, background: "#869" },
 ];
 
 const createAnimation = () => css`
@@ -54,6 +54,7 @@ const createLiCss = () => css`
       (styles += `
         &:nth-child(${row.id}):hover span{
           background: ${row.background};
+          transition:1s;
         }
     `),
     ""
