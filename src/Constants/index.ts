@@ -27,13 +27,17 @@ export const LAYERPROPS: T.LayerPropsType[] = [
 ];
 
 export const COLORS: T.ColorsType = {
+  ABOUT: "#ff7707",
+  SKILLS: "#990ea1",
+  PROJECTS: "#1398ae",
+  CONTACT: "#4fa507",
   REACT: "#61DAFB",
   VUE: "#4FC08D",
   JS: "#F7DF1E",
   TS: "#3178c6",
   TS2: "rgb(49, 120, 198)",
   INSTAGRAM: "#e4405f",
-  GIT: "#181717",
+  GIT: "#4c3c3c",
   BLOG: "#869",
 };
 
@@ -42,22 +46,22 @@ export const ICONS: T.IconsType = {
     {
       id: 1,
       icon: faIdCard,
-      background: "",
+      background: COLORS.ABOUT,
     },
     {
       id: 2,
       icon: faScrewdriverWrench,
-      background: "",
+      background: COLORS.SKILLS,
     },
     {
       id: 3,
-      icon: faMagnifyingGlass,
-      background: "",
+      icon: faFolderOpen,
+      background: COLORS.PROJECTS,
     },
     {
       id: 4,
-      icon: faFolderOpen,
-      background: "",
+      icon: faMagnifyingGlass,
+      background: COLORS.CONTACT,
     },
   ],
   SKILLS: [

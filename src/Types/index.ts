@@ -20,6 +20,10 @@ export interface IconsType {
 }
 
 export interface ColorsType {
+  ABOUT:string;
+  SKILLS:string;
+  PROJECTS:string;
+  CONTACT:string;
   REACT: string;
   VUE: string;
   JS: string;
