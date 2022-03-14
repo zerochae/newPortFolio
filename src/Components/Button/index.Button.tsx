@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface ButtonProps {
   icon: T.IconType;
-  page: string;
-  handlePage: (diff: string) => void;
+  page: string | null;
+  handlePage: null | ((diff: string) => void);
 }
 
 const Button = ({ icon, page, handlePage }: ButtonProps): JSX.Element => {
@@ -15,7 +15,7 @@ const Button = ({ icon, page, handlePage }: ButtonProps): JSX.Element => {
     <S.Li
       key={icon.id}
       iconBg={icon.background}
-      onClick={() => handlePage(page)}
+      onClick={() => page && handlePage && handlePage(page)}
     >
       {new Array(C.LAYERS).fill(null).map((_, index) => (
         <S.Layer key={index} />

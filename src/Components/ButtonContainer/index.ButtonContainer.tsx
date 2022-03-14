@@ -20,22 +20,18 @@ const ButtonContainer = ({ icons, page }: ButtonContainerType): JSX.Element => {
 
   return (
     <S.Container>
-      {icons.map((icon, index) => (
-        <Button
-          key={icon.id}
-          icon={icon}
-          page={
-            page === C.PAGES.MAIN
-              ? C.MAINMENU[index]
-              : page === C.PAGES.SKILLS
-              ? C.SKILLSMENU[index]
-              : page === C.PAGES.CONTACT
-              ? C.CONTACTMENU[index]
-              : ""
-          }
-          handlePage={handlePage}
-        />
-      ))}
+      {icons.map((icon, index) =>
+        page === C.PAGES.MAIN ? (
+          <Button
+            key={icon.id}
+            icon={icon}
+            page={C.MAINMENU[index]}
+            handlePage={handlePage}
+          />
+        ) : (
+          <Button key={icon.id} icon={icon} page={null} handlePage={null} />
+        )
+      )}
     </S.Container>
   );
 };

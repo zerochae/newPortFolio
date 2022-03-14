@@ -15,9 +15,11 @@ const Main = (): JSX.Element => {
       <GlobalStyle />
       <S.Container>
         <ButtonContainer icons={C.ICONS.MAIN.data} page={C.PAGES.MAIN} />
-        <Skills />
-        <About />
-        <Contact />
+        <S.Contents>
+          <Skills />
+          <About />
+          <Contact />
+        </S.Contents>
       </S.Container>
     </>
   );

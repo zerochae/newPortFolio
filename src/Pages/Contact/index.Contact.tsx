@@ -12,14 +12,9 @@ const Contact = ({}: ContactProps): JSX.Element => {
 
   return (
     <>
-      {page === C.PAGES.CONTACT && (
-        <S.Container>
-          <ButtonContainer
-            icons={C.ICONS.CONTACT.data}
-            page={C.PAGES.CONTACT}
-          />
-        </S.Container>
-      )}
+      <S.Container page={page}>
+        <ButtonContainer icons={C.ICONS.CONTACT.data} page={C.PAGES.CONTACT} />
+      </S.Container>
     </>
   );
 };

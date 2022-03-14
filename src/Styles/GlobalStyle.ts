@@ -29,6 +29,7 @@ body {
 	line-height: 1;
 	box-sizing: border-box;
 	color: #fff;
+	background: #222;
 }
 ol, ul {
 	list-style: none;

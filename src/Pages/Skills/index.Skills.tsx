@@ -12,11 +12,9 @@ const Skills = ({}: SkillProps): JSX.Element => {
 
   return (
     <>
-      {page === C.PAGES.SKILLS && (
-        <S.Container>
-          <ButtonContainer icons={C.ICONS.SKILLS.data} page={C.PAGES.SKILLS} />
-        </S.Container>
-      )}
+      <S.Container page={page}>
+        <ButtonContainer icons={C.ICONS.SKILLS.data} page={C.PAGES.SKILLS} />
+      </S.Container>
     </>
   );
 };
