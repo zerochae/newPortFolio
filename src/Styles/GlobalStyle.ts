@@ -44,6 +44,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+a {color: #fff; text-decoration: none; outline: none}
+a:hover, a:active,a:visited {text-decoration: none; color:#fff; background-color:none;}
+
 `;
 
 export default GlobalStyle;
