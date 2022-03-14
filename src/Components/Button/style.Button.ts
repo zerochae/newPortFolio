@@ -2,10 +2,8 @@ import styled, { css } from "styled-components";
 
 import * as C from "Constants/index";
 
-const LayerProps = C.LAYERPROPS;
-
 const createAnimation = () => css`
-  ${LayerProps.reduce(
+  ${C.LAYERPROPS.reduce(
     (styles, row) =>
       (styles += `
     @keyframes in${row.id} {
@@ -20,7 +18,7 @@ const createAnimation = () => css`
 `;
 
 const createLayerCss = () => css`
-  ${LayerProps.reduce(
+  ${C.LAYERPROPS.reduce(
     (styles, row) =>
       (styles += `
     &:hover span:nth-child(${row.id}){
