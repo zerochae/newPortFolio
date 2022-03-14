@@ -1,23 +1,11 @@
 import styled, { css } from "styled-components";
 
-/*
-color code
-facebook #3b5999
-instagram #e4405f
-*/
-
 const LayerProps = [
   { id: 5, translateX: "40px", translateY: "-40px" },
   { id: 4, translateX: "30px", translateY: "-30px" },
   { id: 3, translateX: "20px", translateY: "-20px" },
   { id: 2, translateX: "10px", translateY: "-10px" },
   { id: 1, translateX: "0px", translateY: "0px" },
-];
-
-const LiProps = [
-  { id: 1, background: "#e4405f" },
-  { id: 2, background: "#555" },
-  { id: 3, background: "#869" },
 ];
 
 const createAnimation = () => css`
@@ -48,35 +36,30 @@ const createLayerCss = () => css`
   )}
 `;
 
-const createLiCss = () => css`
-  ${LiProps.reduce(
-    (styles, row) =>
-      (styles += `
-        &:nth-child(${row.id}):hover span{
-          background: ${row.background};
-          transition:1s;
-        }
-    `),
-    ""
-  )}
-`;
-
-export const Li = styled.li`
+export const Li = styled.li<{ iconBg: string }>`
   position: relative;
   width: 60px;
   height: 60px;
   margin: 0 10px;
 
   &:hover span {
+    background: ${(props) => props.iconBg};
+    transition: 1s;
     z-index: 1000;
     color: #fff;
     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.05);
   }
 
+  &:hover svg rect {
+    fill: rgb(255, 255, 255);
+  }
+
+  &:hover svg path {
+    fill: ${(props) =>
+      props.iconBg === "#3178c6" && "rgb(49, 120, 198) !important"};
+  }
+
   ${createLayerCss()};
-
-  ${createLiCss()};
-
   ${createAnimation()};
 `;
 

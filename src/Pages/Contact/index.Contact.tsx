@@ -12,14 +12,17 @@ const icons: T.iconType[] = [
   {
     id: 1,
     icon: faInstagram,
+    background: "#e4405f",
   },
   {
     id: 2,
     icon: faGithub,
+    background: "#181717",
   },
   {
     id: 3,
     icon: faBlogger,
+    background: "#869",
   },
 ];
 

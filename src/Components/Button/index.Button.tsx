@@ -11,12 +11,16 @@ const spans = new Array(4).fill(null);
 
 const Button = ({ iconProps }: ButtonPropsType): JSX.Element => {
   return (
-    <S.Li key={iconProps.id}>
+    <S.Li key={iconProps.id} iconBg={iconProps.background}>
       {spans.map((_, index) => (
         <S.Layer key={index} />
       ))}
       <S.Layer>
-        <FontAwesomeIcon icon={iconProps.icon} />
+        {typeof iconProps.icon === "function" ? (
+          <iconProps.icon />
+        ) : (
+          <FontAwesomeIcon icon={iconProps.icon} />
+        )}
       </S.Layer>
     </S.Li>
   );
