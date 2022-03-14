@@ -1,4 +1,5 @@
 import * as A from "Actions/Main";
+import * as C from "Constants/index";
 
 type MainState = {
   page: string;
@@ -7,7 +8,7 @@ type MainState = {
 type MainAction = ReturnType<typeof A.setPage>;
 
 const initialState: MainState = {
-  page: "MAIN",
+  page: C.PAGES.MAIN,
 };
 
 const main = (state: MainState = initialState, action: MainAction) => {
