@@ -26,12 +26,36 @@ export const LAYERPROPS: T.LayerPropsType[] = [
   { id: 1, translateX: "0px", translateY: "0px" },
 ];
 
-export const STEPS = {
+export const PAGES: T.PagesType = {
+  MAIN: "MAIN",
   ABOUT: "ABOUT",
   SKILLS: "SKILLS",
   PROJECTS: "PROJECTS",
   CONTACT: "CONTACT",
+  REACT: "REACT",
+  VUE: "VUE",
+  JS: "JS",
+  TS: "TS",
+  INSTAGRAM: "INSTAGRAM",
+  GIT: "GIT",
+  BLOG: "BLOG",
 };
+
+export const MAINMENU: T.MenuType = [
+  PAGES.ABOUT,
+  PAGES.SKILLS,
+  PAGES.PROJECTS,
+  PAGES.CONTACT,
+];
+
+export const SKILLSMENU: T.MenuType = [
+  PAGES.REACT,
+  PAGES.VUE,
+  PAGES.JS,
+  PAGES.TS,
+];
+
+export const CONTACTMENU: T.MenuType = [PAGES.INSTAGRAM, PAGES.GIT, PAGES.BLOG];
 
 export const COLORS: T.ColorsType = {
   ABOUT: "#ff7707",

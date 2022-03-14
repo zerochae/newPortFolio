@@ -1,19 +1,19 @@
 import * as A from "Actions/Main";
 
 type MainState = {
-  step: string;
+  page: string;
 };
 
-type MainAction = ReturnType<typeof A.setStep>;
+type MainAction = ReturnType<typeof A.setPage>;
 
 const initialState: MainState = {
-  step: "MAIN",
+  page: "MAIN",
 };
 
 const main = (state: MainState = initialState, action: MainAction) => {
   switch (action.type) {
-    case A.SETSTEP:
-      return { step: action.payload };
+    case A.SETPAGE:
+      return { page: action.payload };
     default:
       return state;
   }

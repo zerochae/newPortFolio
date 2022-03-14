@@ -1,6 +1,6 @@
-export const SETSTEP = "main/SETSTEP" as const;
+export const SETPAGE = "main/SETPAGE" as const;
 
-export const setStep = (diff: string) => ({
-  type: SETSTEP,
+export const setPage = (diff: string) => ({
+  type: SETPAGE,
   payload: diff,
 });

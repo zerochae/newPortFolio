@@ -6,11 +6,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface ButtonProps {
   icon: T.IconType;
+  page: string;
+  handlePage: (diff: string) => void;
 }
 
-const Button = ({ icon }: ButtonProps): JSX.Element => {
+const Button = ({ icon, page, handlePage }: ButtonProps): JSX.Element => {
   return (
-    <S.Li key={icon.id} iconBg={icon.background}>
+    <S.Li
+      key={icon.id}
+      iconBg={icon.background}
+      onClick={() => handlePage(page)}
+    >
       {new Array(C.LAYERS).fill(null).map((_, index) => (
         <S.Layer key={index} />
       ))}

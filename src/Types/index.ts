@@ -12,12 +12,22 @@ export interface LayerPropsType {
   translateY: string;
 }
 
-export interface StepsType {
+export interface PagesType {
+  MAIN: string;
   ABOUT: string;
   SKILLS: string;
   PROJECTS: string;
   CONTACT: string;
+  REACT: string;
+  VUE: string;
+  JS: string;
+  TS: string;
+  INSTAGRAM: string;
+  GIT: string;
+  BLOG: string;
 }
+
+export type MenuType = string[];
 
 export interface IconsType {
   MAIN: {
