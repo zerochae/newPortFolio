@@ -26,6 +26,13 @@ export const LAYERPROPS: T.LayerPropsType[] = [
   { id: 1, translateX: "0px", translateY: "0px" },
 ];
 
+export const STEPS = {
+  ABOUT: "ABOUT",
+  SKILLS: "SKILLS",
+  PROJECTS: "PROJECTS",
+  CONTACT: "CONTACT",
+};
+
 export const COLORS: T.ColorsType = {
   ABOUT: "#ff7707",
   SKILLS: "#990ea1",
@@ -42,66 +49,78 @@ export const COLORS: T.ColorsType = {
 };
 
 export const ICONS: T.IconsType = {
-  MAIN: [
-    {
-      id: 1,
-      icon: faIdCard,
-      background: COLORS.ABOUT,
-    },
-    {
-      id: 2,
-      icon: faScrewdriverWrench,
-      background: COLORS.SKILLS,
-    },
-    {
-      id: 3,
-      icon: faFolderOpen,
-      background: COLORS.PROJECTS,
-    },
-    {
-      id: 4,
-      icon: faMagnifyingGlass,
-      background: COLORS.CONTACT,
-    },
-  ],
-  SKILLS: [
-    {
-      id: 1,
-      icon: faReact,
-      background: COLORS.REACT,
-    },
-    {
-      id: 2,
-      icon: faVuejs,
-      background: COLORS.VUE,
-    },
-    {
-      id: 3,
-      icon: faJs,
-      background: COLORS.JS,
-    },
-    {
-      id: 4,
-      icon: TsIcon,
-      background: COLORS.TS,
-    },
-  ],
-  PROJECTS: [],
-  CONTACT: [
-    {
-      id: 1,
-      icon: faInstagram,
-      background: COLORS.INSTAGRAM,
-    },
-    {
-      id: 2,
-      icon: faGithub,
-      background: COLORS.GIT,
-    },
-    {
-      id: 3,
-      icon: faBlogger,
-      background: COLORS.BLOG,
-    },
-  ],
+  MAIN: {
+    id: 1,
+    data: [
+      {
+        id: 1,
+        content: faIdCard,
+        background: COLORS.ABOUT,
+      },
+      {
+        id: 2,
+        content: faScrewdriverWrench,
+        background: COLORS.SKILLS,
+      },
+      {
+        id: 3,
+        content: faFolderOpen,
+        background: COLORS.PROJECTS,
+      },
+      {
+        id: 4,
+        content: faMagnifyingGlass,
+        background: COLORS.CONTACT,
+      },
+    ],
+  },
+  SKILLS: {
+    id: 2,
+    data: [
+      {
+        id: 1,
+        content: faReact,
+        background: COLORS.REACT,
+      },
+      {
+        id: 2,
+        content: faVuejs,
+        background: COLORS.VUE,
+      },
+      {
+        id: 3,
+        content: faJs,
+        background: COLORS.JS,
+      },
+      {
+        id: 4,
+        content: TsIcon,
+        background: COLORS.TS,
+      },
+    ],
+  },
+  PROJECTS: {
+    id: 3,
+    data: [],
+  },
+  CONTACT: {
+    id: 4,
+    data: [
+      {
+        id: 1,
+        content: faInstagram,
+        background: COLORS.INSTAGRAM,
+      },
+      {
+        id: 2,
+        content: faGithub,
+        background: COLORS.GIT,
+      },
+      {
+        id: 3,
+        content: faBlogger,
+        background: COLORS.BLOG,
+      },
+    ],
+  },
 };

@@ -3,10 +3,12 @@ import * as C from "Constants/index";
 
 import ButtonContainer from "Components/ButtonContainer/index.ButtonContainer";
 
-const Skills = () => {
+interface SkillProps {}
+
+const Skills = ({}: SkillProps): JSX.Element => {
   return (
     <S.Container>
-      <ButtonContainer icons={C.ICONS.SKILLS} />
+      <ButtonContainer icons={C.ICONS.SKILLS.data} />
     </S.Container>
   );
 };

@@ -1,6 +1,9 @@
 import * as S from "Pages/About/style.About";
+import * as C from "Constants/index";
 
-const About = (): JSX.Element => {
+interface AboutProps {}
+
+const About = ({}: AboutProps): JSX.Element => {
   return <S.Container></S.Container>;
 };
 

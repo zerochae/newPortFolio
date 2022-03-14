@@ -8,10 +8,11 @@ interface ButtonContainerType {
 }
 
 const ButtonContainer = ({ icons }: ButtonContainerType): JSX.Element => {
+
   return (
     <S.Container>
       {icons.map((icon) => (
-        <Button key={icon.id} iconProps={icon} />
+        <Button key={icon.id} icon={icon}/>
       ))}
     </S.Container>
   );

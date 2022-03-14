@@ -3,11 +3,15 @@ import * as C from "Constants/index";
 
 import ButtonContainer from "Components/ButtonContainer/index.ButtonContainer";
 
-const Contact = (): JSX.Element => {
+interface ContactProps {}
+
+const Contact = ({}: ContactProps): JSX.Element => {
   return (
-    <S.Container>
-      <ButtonContainer icons={C.ICONS.CONTACT} />
-    </S.Container>
+    <>
+      <S.Container>
+        <ButtonContainer icons={C.ICONS.CONTACT.data} />
+      </S.Container>
+    </>
   );
 };
 

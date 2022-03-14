@@ -2,7 +2,7 @@ import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 export interface IconType {
   id: number;
-  icon: IconDefinition | (() => JSX.Element);
+  content: IconDefinition | (() => JSX.Element);
   background: string;
 }
 
@@ -12,18 +12,37 @@ export interface LayerPropsType {
   translateY: string;
 }
 
+export interface StepsType {
+  ABOUT: string;
+  SKILLS: string;
+  PROJECTS: string;
+  CONTACT: string;
+}
+
 export interface IconsType {
-  MAIN: IconType[];
-  SKILLS: IconType[];
-  PROJECTS: IconType[];
-  CONTACT: IconType[];
+  MAIN: {
+    id: number;
+    data: IconType[];
+  };
+  SKILLS: {
+    id: number;
+    data: IconType[];
+  };
+  PROJECTS: {
+    id: number;
+    data: IconType[];
+  };
+  CONTACT: {
+    id: number;
+    data: IconType[];
+  };
 }
 
 export interface ColorsType {
-  ABOUT:string;
-  SKILLS:string;
-  PROJECTS:string;
-  CONTACT:string;
+  ABOUT: string;
+  SKILLS: string;
+  PROJECTS: string;
+  CONTACT: string;
   REACT: string;
   VUE: string;
   JS: string;
