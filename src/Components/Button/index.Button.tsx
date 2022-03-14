@@ -1,18 +1,17 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import * as S from "Components/Button/style.Button";
 import * as T from "Types/index";
+import * as C from "Constants/index";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface ButtonPropsType {
-  iconProps: T.iconType;
+  iconProps: T.IconType;
 }
-
-const spans = new Array(4).fill(null);
 
 const Button = ({ iconProps }: ButtonPropsType): JSX.Element => {
   return (
     <S.Li key={iconProps.id} iconBg={iconProps.background}>
-      {spans.map((_, index) => (
+      {new Array(C.LAYERS).fill(null).map((_, index) => (
         <S.Layer key={index} />
       ))}
       <S.Layer>

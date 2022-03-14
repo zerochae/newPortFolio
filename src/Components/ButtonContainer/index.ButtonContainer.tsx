@@ -4,7 +4,7 @@ import * as T from "Types/index";
 import Button from "Components/Button/index.Button";
 
 interface ButtonContainerType {
-  icons: T.iconType[];
+  icons: T.IconType[];
 }
 
 const ButtonContainer = ({ icons }: ButtonContainerType): JSX.Element => {

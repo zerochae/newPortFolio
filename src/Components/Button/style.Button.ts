@@ -1,12 +1,8 @@
 import styled, { css } from "styled-components";
 
-const LayerProps = [
-  { id: 5, translateX: "40px", translateY: "-40px" },
-  { id: 4, translateX: "30px", translateY: "-30px" },
-  { id: 3, translateX: "20px", translateY: "-20px" },
-  { id: 2, translateX: "10px", translateY: "-10px" },
-  { id: 1, translateX: "0px", translateY: "0px" },
-];
+import * as C from "Constants/index";
+
+const LayerProps = C.LAYERPROPS;
 
 const createAnimation = () => css`
   ${LayerProps.reduce(
@@ -56,7 +52,7 @@ export const Li = styled.li<{ iconBg: string }>`
 
   &:hover svg path {
     fill: ${(props) =>
-      props.iconBg === "#3178c6" && "rgb(49, 120, 198) !important"};
+      props.iconBg === C.COLORS.TS && `${C.COLORS.TS2} !important`};
   }
 
   ${createLayerCss()};
