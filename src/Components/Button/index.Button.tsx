@@ -4,7 +4,7 @@ import * as C from "Constants/index";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-interface ButtonProps {
+export interface ButtonProps {
   icon: T.IconType;
   page: string | null;
   handlePage: null | ((diff: string) => void);
