@@ -1,5 +1,8 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import Button from "Components/Button/index.Button";
+
 
 export default {
   title: "components/Button",
